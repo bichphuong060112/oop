@@ -9,7 +9,7 @@ public class Dragon {
     }
 
     public static String reverseAndFlip (String s) {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder(); //Xây dựng và thao tác với chuỗi mà không cần phải tạo đối tượng mới mỗi lần thay đổi
         for (int i = s.length() - 1; i >= 0; i--) { //Đổi chiều chạy từ cuối lên
             char c = s.charAt(i);
             //Đảo ngược
