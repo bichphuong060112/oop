@@ -20,7 +20,7 @@ public class NumberToEnglish {
         part[0] = n % 1000; //Lớp đơn vị
         part[1] = (n / 1000) % 1000; //Lớp nghìn
         part[2] = n / 1000000; //Lớp triệu
-        for (int i = part.length - 1; i>= 0; i++) {
+        for (int i = part.length - 1; i>= 0; i--) {
             if (part[i] != 0) {
                 sb.append(ToEnglish(part[i]));
                 if (i == 2) sb.append(" million ");
@@ -37,7 +37,7 @@ public class NumberToEnglish {
             s.append(words[hundred - 1]);
             s.append(" hundred");
         }
-        if (rest != 0) {
+        if (rest == 0) {
             s.append(" ");
             return s.toString();
         }
